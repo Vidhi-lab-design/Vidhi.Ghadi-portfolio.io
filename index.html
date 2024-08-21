@@ -1,188 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: royalblue;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #1c1f4a;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff !important;
+            margin-right: 15px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #cccccc !important;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #ffffff !important;
+        }
+
+        /* Header */
+        header {
+            background-color: #1c1f4a;
             color: white;
+            padding: 100px 0;
+            text-align: center;
         }
 
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh;
-            padding: 20px;
-        }
-
-        .content {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            max-width: 1000px;
-        }
-
-        .left .illustration {
-            background-image: url('illustration.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: 400px;
-            height: 300px;
-        }
-
-        .right {
-            margin-left: 20px;
-            text-align: left;
-        }
-
-        .photo {
-            width: 150px;
+        header img {
             border-radius: 50%;
-            border: 3px solid white;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
         }
 
-        .name {
-            font-size: 36px;
-            font-family: 'Georgia', serif;
-            font-style: italic;
+        header h1 {
             margin-top: 20px;
+            font-size: 2.5rem;
         }
 
-        .bio {
-            font-size: 18px;
-            font-family: 'Helvetica', sans-serif;
+        header p {
+            font-size: 1.25rem;
             margin-top: 10px;
         }
 
-        .navigation ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: flex-end;
-            padding: 20px;
+        /* Sections */
+        section {
+            padding: 60px 0;
         }
 
-        .navigation li {
-            margin-left: 20px;
+        section h2 {
+            font-size: 2rem;
+            color: #1c1f4a;
+            margin-bottom: 30px;
         }
 
-        .navigation a {
-            text-decoration: none;
-            color: white;
-            font-family: 'Arial', sans-serif;
-        }
-
-        .hidden-link {
-            display: none;
-        }
-
-        .hidden-section, .info-section {
-            background-color: white;
-            color: black;
-            padding: 20px;
-            margin: 20px auto;
-            width: 90%;
-            max-width: 800px;
-            border-radius: 8px;
-            display: none;
-        }
-
-        .contact {
-            display: flex;
-            justify-content: center;
-            background-color: grey;
-            padding: 20px;
-            margin-top: 50px;
-        }
-
-        .contact a {
-            margin: 0 10px;
-        }
-
-        .contact img {
-            width: 30px;
-            height: 30px;
+        /* Footer */
+        footer {
+            background-color: #1c1f4a;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="content">
-            <div class="left">
-                <div class="illustration"></div>
-            </div>
-            <div class="right">
-                <img src="self.jpg" alt="My Photo" class="photo">
-                <h1 class="name">Vidhi Ghadi</h1>
-                <p class="bio">Hi Msc Economics student with specalisation in Data Analytics. I have a well proven experience of learning things from scratch to get desired result with driven soft and analytical skills like problem solving and critical thinking.</p>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#qualifications">Qualifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#internship">Internship</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
-    <div class="navigation">
-        <ul>
-            <li><a href="#resume" class="hidden-link">Resume</a></li>
-            <li><a href="#qualifications">Qualifications</a></li>
-            <li><a href="#internships">Internships</a></li>
-            <li><a href="#projects" class="hidden-link">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-        </ul>
-    </div>
+    </nav>
 
-    <div class="contact">
-        <a href="mailto:ghadividhi79@gmail.com" target="_blank"><img src="gmail-icon.png" alt="Gmail"></a>
-        <a href="https://www.linkedin.com/in/vidhi-ghadi-7b1471251/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-        <a href="https://www.instagram.com/vidhuarca/" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
-    </div>
-
-    <div class="container">
-        <div class="links">
-            <a href="https://drive.google.com/file/d/18q1qYVtthlX8X_yvhyd1lfHWNwibJVGu/view?usp=drive_link" target="_blank">Resume</a>
-            <a href="projects-link" target="_blank">Projects</a>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <img src="your-photo.jpg" alt="Your Photo">
+            <h1>Your Name</h1>
+            <p>Your Bio</p>
         </div>
+    </header>
 
-    <!-- Sections for Qualifications, Internships, Skills -->
-    <div id="qualifications" class="info-section">
-        <h2>Qualifications</h2>
-        <ul>
-            <li>M.Sc. Economics (Data Analytics) expected 2025
-                Symbiosis School of Economics
-                Symbiosis International University, Pune</li>
-            <li>B.A. in Economics 2023
-                Wilson College, Mumbai
-                Concentration in Economics & Quantitative
-                with a Minor in English literature & Psychology; graduated with 9.01 CGPA</li>
-            <li>HSC Commerce (Maths/IT) 2020
-                Thakur College of Science and Commerce</li>
-        </ul>
-    </div>
+    <!-- Resume Section -->
+    <section id="resume">
+        <div class="container">
+            <h2>Resume</h2>
+            <p>Your resume details go here...</p>
+        </div>
+    </section>
 
-    <div id="internships" class="info-section">
-        <h2>Internships</h2>
-        <ul>
-            <li>Maharashtra Economic Development Council, Mumbai December 2022 to January 2023
-                Role :- Administrations and Operations Executive Intern</li>
-            <li>Healing Anonymously, Jaipur (Remote) May 2021 to October 2021
-                Role :- Content Writer and Social Media</li>
-            <li>UnSchool, Hyderabad (Remote) December 2020 to January 2021
-                Role :- Business Development Intern</li>
-        </ul>
-    </div>
+    <!-- Projects Section -->
+    <section id="projects" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2>Projects</h2>
+            <p>Your projects details go here...</p>
+        </div>
+    </section>
 
-    <div id="skills" class="info-section">
-        <h2>Skills</h2>
-        <ul>
-            <li>Canva</li>
-            <li>Hadoop, Tableau, QGIS, Python, R</li>
-            <li>Problem solving</li>
-            <li>Public Speaking</li>
-            <li>Leadership and Patience</li>
-        </ul>
-    </div>
+    <!-- Qualifications Section -->
+    <section id="qualifications">
+        <div class="container">
+            <h2>Qualifications</h2>
+            <p>Your qualifications details go here...</p>
+        </div>
+    </section>
+
+    <!-- Internship Section -->
+    <section id="internship" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2>Internship</h2>
+            <p>Your internship details go here...</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <p>Your skills details go here...</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Your contact details go here...</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
