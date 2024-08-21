@@ -7,92 +7,182 @@
     <style>
         body {
             margin: 0;
-            padding: 0;
-            font-family: 'Roboto Slab', serif;
-            background-color: #f6c1c1; /* Light baby pink */
-            overflow-x: hidden; /* Prevent horizontal scroll */
+            font-family: Arial, sans-serif;
+            background-color: royalblue;
+            color: white;
         }
 
         .container {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            text-align: center;
+            height: 80vh;
             padding: 20px;
         }
 
-        .profile {
+        .content {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
-            opacity: 0;
-            animation: fadeIn 1s ease-out forwards, dropIn 1s ease-out forwards;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .left .illustration {
+            background-image: url('illustration.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 400px;
+            height: 300px;
+        }
+
+        .right {
+            margin-left: 20px;
+            text-align: left;
         }
 
         .photo {
             width: 150px;
-            height: 150px;
             border-radius: 50%;
-            margin-right: 20px;
-            animation: dropIn 1s ease-out forwards;
+            border: 3px solid white;
         }
 
-        .info h1 {
-            margin: 0;
-            font-weight: bold;
-            color: white;
-        }
-
-        .bio {
-            margin: 0;
-            color: white;
-        }
-
-        .links {
+        .name {
+            font-size: 36px;
+            font-family: 'Georgia', serif;
+            font-style: italic;
             margin-top: 20px;
         }
 
-        .link {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
+        .bio {
+            font-size: 18px;
+            font-family: 'Helvetica', sans-serif;
+            margin-top: 10px;
+        }
+
+        .navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px;
+        }
+
+        .navigation li {
+            margin-left: 20px;
+        }
+
+        .navigation a {
             text-decoration: none;
             color: white;
-            background-color: black;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
+            font-family: 'Arial', sans-serif;
         }
 
-        .link:hover {
-            background-color: #333;
+        .hidden-link {
+            display: none;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .hidden-section, .info-section {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 8px;
+            display: none;
         }
 
-        @keyframes dropIn {
-            from { transform: translateY(-100px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+        .contact {
+            display: flex;
+            justify-content: center;
+            background-color: grey;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .contact a {
+            margin: 0 10px;
+        }
+
+        .contact img {
+            width: 30px;
+            height: 30px;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <div class="profile">
-            <img src="Profile Picture.jpg" alt="Your Photo" class="photo">
-            <div class="info">
-                <h1>Vidhi Ghadi</h1>
-                <p class="bio">Hello! I’m Vidhi Ghadi, a proven ability to learn from scratch and achieve outstanding results. My educational journey, culminating in an M.Sc. in Economics with a focus on Data Analytics, has been complemented by practical experience through diverse internships. I excel in problem-solving, thrive in team environments, and am adept at managing multiple tasks simultaneously. My hands-on experiences range from content writing and business development to administrative roles, all of which have honed my analytical and communication skills. I’m passionate about leveraging data to drive insights and am committed to continuous learning and growth. Welcome to my portfolio, where you can explore my projects, skills, and accomplishments.</p>
+        <div class="content">
+            <div class="left">
+                <div class="illustration"></div>
+            </div>
+            <div class="right">
+                <img src="self.jpg" alt="My Photo" class="photo">
+                <h1 class="name">Vidhi Ghadi</h1>
+                <p class="bio">Hi Msc Economics student with specalisation in Data Analytics. I have a well proven experience of learning things from scratch to get desired result with driven soft and analytical skills like problem solving and critical thinking.</p>
             </div>
         </div>
+    </div>
+    <div class="navigation">
+        <ul>
+            <li><a href="#resume" class="hidden-link">Resume</a></li>
+            <li><a href="#qualifications">Qualifications</a></li>
+            <li><a href="#internships">Internships</a></li>
+            <li><a href="#projects" class="hidden-link">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+    </div>
+
+    <div class="contact">
+        <a href="mailto:ghadividhi79@gmail.com" target="_blank"><img src="gmail-icon.png" alt="Gmail"></a>
+        <a href="https://www.linkedin.com/in/vidhi-ghadi-7b1471251/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+        <a href="https://www.instagram.com/vidhuarca/" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+    </div>
+
+    <div class="container">
         <div class="links">
-            <a href="https://drive.google.com/file/d/1wq-_rd9bxAPZN1juUETCABypL3GF7crX/view?usp=drive_link" class="link">Resume</a>
-            <a href="your-projects.html" class="link">Projects</a>
+            <a href="https://drive.google.com/file/d/18q1qYVtthlX8X_yvhyd1lfHWNwibJVGu/view?usp=drive_link" target="_blank">Resume</a>
+            <a href="projects-link" target="_blank">Projects</a>
         </div>
+
+    <!-- Sections for Qualifications, Internships, Skills -->
+    <div id="qualifications" class="info-section">
+        <h2>Qualifications</h2>
+        <ul>
+            <li>M.Sc. Economics (Data Analytics) expected 2025
+                Symbiosis School of Economics
+                Symbiosis International University, Pune</li>
+            <li>B.A. in Economics 2023
+                Wilson College, Mumbai
+                Concentration in Economics & Quantitative
+                with a Minor in English literature & Psychology; graduated with 9.01 CGPA</li>
+            <li>HSC Commerce (Maths/IT) 2020
+                Thakur College of Science and Commerce</li>
+        </ul>
+    </div>
+
+    <div id="internships" class="info-section">
+        <h2>Internships</h2>
+        <ul>
+            <li>Maharashtra Economic Development Council, Mumbai December 2022 to January 2023
+                Role :- Administrations and Operations Executive Intern</li>
+            <li>Healing Anonymously, Jaipur (Remote) May 2021 to October 2021
+                Role :- Content Writer and Social Media</li>
+            <li>UnSchool, Hyderabad (Remote) December 2020 to January 2021
+                Role :- Business Development Intern</li>
+        </ul>
+    </div>
+
+    <div id="skills" class="info-section">
+        <h2>Skills</h2>
+        <ul>
+            <li>Canva</li>
+            <li>Hadoop, Tableau, QGIS, Python, R</li>
+            <li>Problem solving</li>
+            <li>Public Speaking</li>
+            <li>Leadership and Patience</li>
+        </ul>
     </div>
 </body>
 </html>
