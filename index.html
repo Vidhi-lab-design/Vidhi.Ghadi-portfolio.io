@@ -202,20 +202,26 @@
             text-align: center;
         }
 
-        .skills-container,
-        .contact-container {
+        .skills-container {
             display: inline-block;
             margin: 20px auto;
-        }
-
-        .skills-container {
             text-align: center;
         }
 
         .skills-heading {
-            font-size: 24px;
+            font-size: 48px; /* Match with other section headings */
             font-weight: 600;
             margin-bottom: 20px;
+        }
+
+        .skills-group {
+            margin-bottom: 30px;
+        }
+
+        .skills-group h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
         }
 
         .skill-item {
@@ -375,17 +381,23 @@
         <div class="skills-contact-container">
             <div class="skills-container">
                 <h2 class="skills-heading">Skills</h2>
-                <div class="skill-item skill-python">Python</div>
-                <div class="skill-item skill-hadoop">Hadoop</div>
-                <div class="skill-item skill-r">R</div>
-                <div class="skill-item skill-qgis">QGIS</div>
-                <div class="skill-item skill-tableau">Tableau</div>
-                <div class="skill-item skill-ms-tools">MS Tools</div>
-                <div class="skill-item skill-self-motivated">Self-Motivated</div>
-                <div class="skill-item skill-goal-oriented">Goal Oriented</div>
-                <div class="skill-item skill-keen-learner">Keen Learner</div>
-                <div class="skill-item skill-multitasking">Multitasking</div>
-                <div class="skill-item skill-problem-solving">Problem Solving</div>
+                <div class="skills-group">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-item skill-python">Python</div>
+                    <div class="skill-item skill-hadoop">Hadoop</div>
+                    <div class="skill-item skill-r">R</div>
+                    <div class="skill-item skill-qgis">QGIS</div>
+                    <div class="skill-item skill-tableau">Tableau</div>
+                    <div class="skill-item skill-ms-tools">MS Tools</div>
+                </div>
+                <div class="skills-group">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-item skill-self-motivated">Self-Motivated</div>
+                    <div class="skill-item skill-goal-oriented">Goal Oriented</div>
+                    <div class="skill-item skill-keen-learner">Keen Learner</div>
+                    <div class="skill-item skill-multitasking">Multitasking</div>
+                    <div class="skill-item skill-problem-solving">Problem Solving</div>
+                </div>
             </div>
             <div class="contact-container">
                 <h2>Contact</h2>
