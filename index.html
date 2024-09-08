@@ -12,9 +12,8 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f0e1; /* Beige shade */
-            position: relative;
-            padding-top: 80px; /* Adjust padding to avoid overlap with fixed header */
+            background-color: #f8f5f2;
+            padding-top: 100px; /* Adjusted for header height */
         }
 
         /* Header styling */
@@ -61,7 +60,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 50px;
-            background-color: #f8f5f2; /* Light beige background */
+            min-height: 100vh;
         }
 
         .text-section {
@@ -89,7 +88,6 @@
             cursor: pointer;
             margin-top: 20px;
             font-weight: bold;
-            text-decoration: none; /* Removes underline */
         }
 
         .btn-custom:hover {
@@ -145,12 +143,14 @@
 
         /* Sections */
         .section {
-            padding: 60px 0;
+            padding: 100px 0; /* Increase padding to ensure enough spacing between sections */
+            background-color: #f5f0e1; /* Lighter background for sections */
         }
 
-        .section img {
-            max-width: 50px;
-            margin-right: 10px;
+        .section h2 {
+            font-size: 36px;
+            color: #2d2d2d;
+            text-align: center;
         }
 
         .qualifications-container,
@@ -171,12 +171,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-
-        .qualification-box img,
-        .internship-box img {
-            max-width: 60px;
-            margin-bottom: 10px;
+            background-color: #fff;
         }
 
         .projects-container {
@@ -202,23 +197,12 @@
         .skills-contact-container {
             padding: 60px 20px;
             text-align: center;
-            background-color: #f5f0e1; /* Beige background for skills and contact */
-        }
-
-        .skills-container {
-            display: inline-block;
-            margin: 20px auto;
-            text-align: center;
         }
 
         .skills-heading {
-            font-size: 48px; /* Match with other section headings */
+            font-size: 36px;
             font-weight: 600;
             margin-bottom: 20px;
-        }
-
-        .skills-group {
-            margin-bottom: 30px;
         }
 
         .skills-group h3 {
@@ -237,76 +221,38 @@
             background-color: #2d2d2d;
         }
 
-        .skill-python {
-            background-color: #306998;
-        }
-
-        .skill-hadoop {
-            background-color: #ff9900;
-        }
-
-        .skill-r {
-            background-color: #276DC8;
-        }
-
-        .skill-qgis {
-            background-color: #f6c94c;
-        }
-
-        .skill-tableau {
-            background-color: #E8A500;
-        }
-
-        .skill-ms-tools {
-            background-color: #1E4D92;
-        }
-
-        .skill-self-motivated {
-            background-color: #3F8EFC;
-        }
-
-        .skill-goal-oriented {
-            background-color: #9B59B6;
-        }
-
-        .skill-keen-learner {
-            background-color: #E74C3C;
-        }
-
-        .skill-multitasking {
-            background-color: #2ECC71;
-        }
-
-        .skill-problem-solving {
-            background-color: #F39C12;
-        }
-
         .contact-container {
-            margin-top: 20px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px 0;
-        }
-
-        .contact-container img {
-            width: 30px;
-            margin-right: 10px;
-        }
-
-        .contact-container a {
-            text-decoration: none;
-            color: #333;
-            font-size: 18px;
-            margin-left: 10px;
+            margin-top: 40px;
         }
 
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .text-section {
+                max-width: 100%;
+            }
+
+            .image-section img {
+                width: 200px;
+                height: 200px;
+            }
+
+            nav a {
+                margin-left: 10px;
+                font-size: 14px;
+            }
+
+            header {
+                padding: 10px 20px;
+            }
         }
     </style>
 </head>
@@ -342,7 +288,31 @@
         </div>
     </section>
 
-    <!-- Add more sections below -->
+    <!-- Qualifications Section -->
+    <section id="qualifications" class="section">
+        <div class="container">
+            <h2>Qualifications</h2>
+            <div class="qualifications-container">
+                <div class="qualification-box">
+                    <img src="https://img.icons8.com/ios/50/000000/university.png" alt="University Logo">
+                    <div>
+                        <h5>M.Sc. Economics (Data Analytics)</h5>
+                        <p>Symbiosis School of Economics<br>2023-25<br>Symbiosis International University, Pune</p>
+                    </div>
+                </div>
+                <div class="qualification-box">
+                    <img src="https://img.icons8.com/ios/50/000000/university.png" alt="University Logo">
+                    <div>
+                        <h5>B.A. (Hons) Economics</h5>
+                        <p>Manipal Academy of Higher Education<br>2020-23<br>Manipal University, Manipal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Sections here -->
+    <!-- ... -->
 
 </body>
 
