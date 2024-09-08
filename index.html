@@ -13,6 +13,8 @@
             margin: 0;
             padding: 0;
             background-color: #f8f5f2;
+            position: relative;
+            padding-top: 80px; /* Adjust padding to avoid overlap with fixed header */
         }
 
         /* Header styling */
@@ -23,6 +25,11 @@
             padding: 20px 50px;
             background-color: #fff;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Ensure header stays on top */
         }
 
         header h1 {
@@ -191,14 +198,19 @@
         }
 
         .skills-contact-container {
-            display: flex;
-            justify-content: space-between;
             padding: 60px 20px;
+            text-align: center;
         }
 
         .skills-container,
         .contact-container {
-            width: 48%;
+            display: inline-block;
+            margin: 20px auto;
+        }
+
+        .skills-container img {
+            width: 50px;
+            margin-bottom: 20px;
         }
 
         .skill-item {
@@ -211,9 +223,14 @@
         }
 
         .contact-container {
+            margin-top: 20px;
+        }
+
+        .contact-item {
             display: flex;
-            flex-direction: column;
             align-items: center;
+            justify-content: center;
+            margin: 10px 0;
         }
 
         .contact-container img {
@@ -225,7 +242,7 @@
             text-decoration: none;
             color: #333;
             font-size: 18px;
-            margin-top: 10px;
+            margin-left: 10px;
         }
 
         /* Smooth scrolling */
@@ -256,7 +273,7 @@
             <h2>Hi, <br> I'm Vidhi Ghadi</h2>
             <div class="line"></div>
             <p>MSc Economics student specializing in Data Analytics, with advanced skills in Excel, Tableau, and econometrics. Proficient in data exploration, visualization, and strategic planning. A quick learner from scratch with strengths in critical thinking, problem-solving, and data-driven storytelling. Experienced in leadership, team management, and effective communication. Passionate about leveraging data insights to drive business solutions and enhance decision-making processes.</p>
-            <a href="https://drive.google.com/file/d/1MTwoJFtkBZYPaFMtuf0x9TWUBe6PLKKs/view?usp=drive_link" target="_blank" class="btn-custom">Resume</a>
+            <a href="https://drive.google.com/file/d/1ibIeik1DluAl9Ecd0oGBuuoK4JrR2fky/view?usp=sharing" target="_blank" class="btn-custom">Resume</a>
         </div>
         <div class="image-section">
             <img src="self.jpg" alt="Vidhi Ghadi">
@@ -283,7 +300,7 @@
                     <img src="https://img.icons8.com/ios/50/000000/university.png" alt="University Logo">
                     <div>
                         <h5>B.A. in Economics</h5>
-                        <p>Wilson College, Mumbai<br>2020-2023<br>Major in Economics & Quantitative<br>Minor in English Literature & Psychology</p>
+                        <p>Wilson College, Mumbai<br>2020-2023<br>Major in Economics & Quantitative<br>Minor in English literature & Psychology</p>
                     </div>
                 </div>
             </div>
@@ -339,6 +356,7 @@
     <section id="skills" class="section">
         <div class="skills-contact-container">
             <div class="skills-container">
+                <img src="https://img.icons8.com/ios/50/000000/skills.png" alt="Skills Logo">
                 <h2>Skills</h2>
                 <div class="skill-item">Python</div>
                 <div class="skill-item">Hadoop</div>
@@ -353,13 +371,14 @@
                 <div class="skill-item">Problem Solving</div>
             </div>
             <div class="contact-container">
+                <h2>Contact</h2>
                 <div class="contact-item">
-                    <img src="https://img.icons8.com/ios/50/000000/email.png" alt="Email Icon">
+                    <img src="https://img.icons8.com/ios/50/000000/gmail.png" alt="Gmail Icon">
                     <a href="mailto:ghadividhi79@gmail.com">ghadividhi79@gmail.com</a>
                 </div>
                 <div class="contact-item">
                     <img src="https://img.icons8.com/ios/50/000000/linkedin.png" alt="LinkedIn Icon">
-                    <a href="https://www.linkedin.com/in/vidhi-ghadi/" target="_blank">Vidhi Ghadi</a>
+                    <a href="https://www.linkedin.com/in/vidhi-ghadi-7b1471251" target="_blank">Vidhi Ghadi</a>
                 </div>
             </div>
         </div>
