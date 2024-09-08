@@ -10,34 +10,12 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
             background-color: #f8f5f2;
-            color: #666;
         }
 
-        /* Navbar */
-        .navbar {
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar-nav .nav-link {
-            color: #333 !important;
-            margin-right: 20px;
-            font-size: 1.1rem;
-            font-weight: 500;
-            text-transform: uppercase;
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: #4CAF50 !important;
-        }
-
-        .navbar-brand {
-            font-weight: bold;
-            color: #2d2d2d !important;
-        }
-
-        /* Header */
+        /* Header styling */
         header {
             display: flex;
             justify-content: space-between;
@@ -47,217 +25,146 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        header img {
-            border-radius: 50%;
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            margin-left: 20px;
-            margin-right: 40px;
-        }
-
         header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 24px;
+            font-weight: bold;
             color: #2d2d2d;
         }
 
-        header p {
-            font-size: 1.25rem;
-            margin-top: 0;
-            color: #666;
+        /* Navigation bar styling */
+        nav {
+            display: flex;
         }
 
-        /* Sections */
-        section {
-            padding: 60px 0;
-            background-color: #f8f5f2;
-        }
-
-        section:nth-child(even) {
-            background-color: #fff;
-        }
-
-        section h2 {
-            font-size: 2rem;
-            color: #2d2d2d;
-            margin-bottom: 30px;
-        }
-
-        section p {
-            color: #666;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #fff;
-            color: #666;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 30px;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .social-icons a {
-            margin: 0 15px;
-            font-size: 1.5rem;
-            color: #666;
+        nav a {
             text-decoration: none;
+            color: #333;
+            margin-left: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
         }
 
-        .social-icons a:hover {
+        nav a:hover {
             color: #4CAF50;
         }
 
-        /* Buttons */
-        .btn-custom {
-            background-color: #2d2d2d;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            transition: background-color 0.3s ease;
+        /* Main content styling */
+        .main-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
         }
 
-        .btn-custom:hover {
+        .text-section {
+            max-width: 50%;
+        }
+
+        .text-section h2 {
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .text-section p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .text-section button {
+            background-color: #2d2d2d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .text-section button:hover {
             background-color: #555;
+        }
+
+        /* Image styling */
+        .image-section {
+            position: relative;
+        }
+
+        .image-section img {
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        /* Decorative elements around image */
+        .circle {
+            position: absolute;
+            background-color: #4CAF50;
+            border-radius: 50%;
+        }
+
+        .circle-1 {
+            width: 30px;
+            height: 30px;
+            bottom: 50px;
+            left: -20px;
+        }
+
+        .circle-2 {
+            width: 100px;
+            height: 100px;
+            top: -30px;
+            right: -50px;
+        }
+
+        .circle-3 {
+            width: 60px;
+            height: 60px;
+            top: 200px;
+            right: -30px;
+        }
+
+        .line {
+            width: 60px;
+            height: 2px;
+            background-color: #2d2d2d;
+            margin: 20px 0;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Vidhi Ghadi</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://drive.google.com/file/d/1MTwoJFtkBZYPaFMtuf0x9TWUBe6PLKKs/view?usp=drive_link"
-                            target="_blank">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#qualifications">Qualifications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#internship">Internship</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="header-content">
-                <img src="self.jpg" alt="Your Photo">
-                <div>
-                    <h1>Vidhi Ghadi</h1>
-                    <p>MSc Economics student specializing in Data Analytics, with advanced skills in Excel, Tableau, and econometrics. Proficient in data exploration, visualization, and strategic planning. A quick learner from scratch with strengths in critical thinking, problem-solving, and data-driven storytelling. Experienced in leadership, team management, and effective communication. Passionate about leveraging data insights to drive business solutions and enhance decision-making processes.</p>
-                </div>
-            </div>
-        </div>
+        <h1>Portfolio</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Qualifications</a>
+            <a href="#">Projects</a>
+            <a href="#">Internships</a>
+            <a href="#">Skills</a>
+            <a href="#">Contact</a>
+        </nav>
     </header>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <p>Dissertation</p>
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="text-section">
+            <h2>Hi, <br> I'm Vidhi Ghadi</h2>
+            <div class="line"></div>
+            <p>MSc Economics student specializing in Data Analytics, with advanced skills in Excel, Tableau, and econometrics. Proficient in data exploration, visualization, and strategic planning. A quick learner from scratch with strengths in critical thinking, problem-solving, and data-driven storytelling. Experienced in leadership, team management, and effective communication. Passionate about leveraging data insights to drive business solutions and enhance decision-making processes.</p>
+            <a href="https://drive.google.com/file/d/1MTwoJFtkBZYPaFMtuf0x9TWUBe6PLKKs/view?usp=drive_link" target="_blank" class="btn-custom">Resume</a>
         </div>
-    </section>
-
-    <!-- Qualifications Section -->
-    <section id="qualifications">
-        <div class="container">
-            <h2>Qualifications</h2>
-            <p><strong>Masters- Post Graduation</strong><br>
-                M.Sc. Economics (Data Analytics) expected 2025<br>
-                Symbiosis School of Economics<br>
-                Symbiosis International University, Pune<br><br>
-
-                <strong>Graduation</strong><br>
-                B.A. in Economics 2023<br>
-                Wilson College, Mumbai<br>
-                graduated with 9.01 CGPA.
-            </p>
+        <div class="image-section">
+            <img src="self.jpg" alt="Vidhi Ghadi">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
         </div>
-    </section>
-
-    <!-- Internship Section -->
-    <section id="internship">
-        <div class="container">
-            <h2>Internship</h2>
-            <p><strong>1. Maharashtra Economic Development Council, Mumbai</strong> (December 2022 to January 2023)<br>
-                <em>Role:</em> Administration and Operations Executive Intern<br><br>
-                <strong>2. Healing Anonymously, Jaipur (Remote)</strong> (May 2021 to October 2021)<br>
-                <em>Role:</em> Content Writer and Social Media<br><br>
-                <strong>3. UnSchool, Hyderabad (Remote)</strong> (December 2020 to January 2021)<br>
-                <em>Role:</em> Business Development Intern<br>
-            </p>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <p>
-                1. Data Cleaning/Analytics<br>
-                2. MS Excel<br>
-                3. Tableau, QGIS, R<br>
-                4. Data Exploration/ Visualization<br>
-                5. Strategic Planning<br>
-                6. Critical Thinking<br>
-                7. Problem-Solving<br>
-                8. Leadership and Team Management<br>
-                9. Effective Communication<br>
-                10. Multilingual Proficiency (English, Hindi, Gujarati, Marathi, Basic Spanish)
-            </p>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <div class="social-icons">
-                <a href="mailto:ghadividhi79@gmail.com">
-                    <img src="https://img.icons8.com/ios/50/666666/gmail.png" alt="Gmail Icon">
-                </a>
-                <a href="https://www.linkedin.com/in/vidhi-ghadi-7b1471251/" target="_blank">
-                    <img src="https://img.icons8.com/ios/50/666666/linkedin.png" alt="LinkedIn Icon">
-                </a>
-                <a href="https://www.instagram.com/vidhuarca/" target="_blank">
-                    <img src="https://img.icons8.com/ios/50/666666/instagram-new.png" alt="Instagram Icon">
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Vidhi Ghadi. All Rights Reserved.</p>
-        </div>
-    </footer>
+    </div>
 
 </body>
 
